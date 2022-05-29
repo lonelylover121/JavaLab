@@ -1,0 +1,14 @@
+class RemoveSpace{
+public String removeSpace(String str){
+str = str.replaceAll("\\s", "");
+return str;
+}
+}
+public class Main {
+public static void main(String[] args)
+{
+String str = "Java Programming";
+RemoveSpace rs = new RemoveSpace();
+System.out.println("Modified string : " + rs.removeSpace(str));
+}
+}
