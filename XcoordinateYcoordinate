@@ -31,8 +31,6 @@ point.getXCoordinate()) + (yCoordinate - point.getYCoordinate())*(yCoordinate -
 point.getYCoordinate()));
 return distance;
 
-12
-
 }
 }
 class Main {
