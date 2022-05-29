@@ -1,0 +1,15 @@
+class Calculator{
+public float findAverage(){
+int num1 = 90, num2 = 87, num3 = 98;
+float average;
+average = (num1 + num2 + num3) / 3;
+return average;
+}
+}
+public class Main
+{
+public static void main(String[] args) {
+Calculator c = new Calculator();
+System.out.format("%.2f", c.findAverage());
+}
+}
