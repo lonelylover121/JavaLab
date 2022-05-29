@@ -1,0 +1,26 @@
+class Restaurant{
+private String name, restaurantAddress;
+private long restaurantContact;
+private float rating;
+public Restaurant(String name, long restaurantContact, String restaurantAddress,
+float rating){
+this.name = name;
+this.restaurantContact = restaurantContact;
+this.restaurantAddress = restaurantAddress;
+this.rating = rating;
+}
+public void displayDetails(){
+System.out.println("Restaurant name: " + name);
+System.out.println("Restaurant contact: " + restaurantContact);
+System.out.println("Restaurant Address: " + restaurantAddress);
+System.out.println("Rating: " + rating);
+}
+}
+public class Main
+{
+public static void main(String[] args) {
+Restaurant r1 = new Restaurant("Happy Restaurant", 987612345l, "Los Angeles",
+4.9f);
+r1.displayDetails();
+}
+}
