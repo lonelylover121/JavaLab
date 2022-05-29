@@ -1,0 +1,49 @@
+import java.io.*;
+class Point {
+private double xCoordinate;
+private double yCoordinate;
+public void setXCoordinate(double xCoordinate){
+this.xCoordinate = xCoordinate;
+}
+public double getXCoordinate(){
+return xCoordinate;
+}
+public void setYCoordinate(double yCoordinate){
+this.yCoordinate = yCoordinate;
+}
+public double getYCoordinate(){
+return yCoordinate;
+}
+public Point(double xCoordinate, double yCoordinate){
+this.xCoordinate = xCoordinate;
+this.yCoordinate = yCoordinate;
+}
+public double calculateDistance(){
+double distance;
+distance = Math.sqrt((xCoordinate - 0)*(xCoordinate - 0) + (yCoordinate -
+0)*(yCoordinate - 0));
+return distance;
+}
+public double calculateDistance(Point point){
+double distance;
+distance = Math.sqrt((xCoordinate - point.getXCoordinate())*(xCoordinate -
+point.getXCoordinate()) + (yCoordinate - point.getYCoordinate())*(yCoordinate -
+point.getYCoordinate()));
+return distance;
+
+12
+
+}
+}
+class Main {
+public static void main(String[] args) {
+Point point1 = new Point(3.5, 1.5);
+Point point2 = new Point(6, 4);
+System.out.format("Distance of point1 from origin is %.2f\n",
+point1.calculateDistance());
+System.out.format("Distance of point2 from origin is %.2f\n",
+point2.calculateDistance());
+System.out.format("Distance of point1 from point2 is %.2f",
+point1.calculateDistance(point2));
+}
+}
