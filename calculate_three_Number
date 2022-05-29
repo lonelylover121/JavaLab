@@ -1,0 +1,23 @@
+import java.util.*;
+public class Calculate{
+public static int Product(int a,int b,int c){
+int product=a*b*c;
+if(a==7)
+  return b*c;
+else if (b==7)
+  return c;
+else if(c==7)
+  return -1;
+else
+  return product;
+}
+
+public static void main(String[] args){
+
+Scanner input=new Scanner(System.in);
+System.out.println("Enter the Three numbers:");
+int num1=input.nextInt();
+int num2=input.nextInt();
+int num3=input.nextInt();
+System.out.println(Product(num1,num2,num3));
+}}
