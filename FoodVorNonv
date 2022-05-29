@@ -1,0 +1,29 @@
+public class FoodCorner {
+public static void main(String[] args) {
+char type ='N';
+int quantity=2;
+int distance=3;
+int veg=12;
+int nonVeg=15;
+int cost=-1;
+if(type=='N'){
+cost=nonVeg*quantity;
+}
+else if(type=='V'){
+cost=veg*quantity;
+}
+if(quantity<1 ||distance<0 || cost==-1){
+System.out.println(cost);
+}
+else{
+if(distance>3 && distance<=6){
+cost=cost+(distance-3);
+}
+else if(distance>6){
+cost=cost+3;
+cost=cost+(distance-6)*2;
+}
+System.out.println(cost);
+}
+}
+}
