@@ -1,0 +1,35 @@
+public class Loan{
+public static void main(String[] args) {
+int accountNumber=1001;
+int salary=40000;
+int accountBalance=250000;
+int expAmount=300000;
+int expEmis=30;
+String type="Car";
+switch(type){
+case "Car" :
+if(salary>25000){
+System.out.println("Eligible Loan Amount= 500000");
+System.out.println("Eligible Emis=36");
+}
+break;
+
+6
+
+case "House" :
+if(salary>500000){
+System.out.println("Eligible Loan Amount= 6000000");
+System.out.println("Eligible Emis=60");
+}
+break;
+case "Business" :
+if(salary>75000){
+System.out.println("Eligible Loan Amount= 7000000");
+System.out.println("Eligible Emis=84");
+}
+break;
+default:
+System.out.println("Invalid");
+}
+}
+}
