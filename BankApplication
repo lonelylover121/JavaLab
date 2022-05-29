@@ -1,0 +1,96 @@
+class Applicant {
+private String name;
+private String jobProfile;
+private int age;
+
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public String getJobProfile() {
+return jobProfile;
+}
+
+
+
+public void setJobProfile(String jobProfile) {
+this.jobProfile = jobProfile;
+}
+public int getAge() {
+return age;
+}
+public void setAge(int age) {
+this.age = age;
+}
+}
+
+class Validator{
+public boolean validateName(String name){
+if(name != null)
+return true;
+else
+return false;
+}
+public boolean validateJobProfile(String jobProfile){
+if(jobProfile == "Associate" || jobProfile == "Clerk" || jobProfile == "Executive" || jobProfile == "Officer")
+return true;
+else
+return false;
+}
+public boolean validateAge(int age){
+if(age >= 18 && age <= 30)
+return true;
+else
+return false;
+}
+public void validate(Applicant applicant) throws Exception{
+if(!validateName("Jenny"))
+throw new InvalidNameException("Invalid name");
+if(!validateJobProfile("Clerk"))
+
+15
+throw new InvalidJobProfileException("Invalid job post");
+if(!validateAge(25))
+throw new InvalidAgeException("Invalid age");
+}
+}
+class InvalidNameException extends Exception {
+public InvalidNameException(String s)
+{
+super(s);
+}
+}
+class InvalidJobProfileException extends Exception {
+public InvalidJobProfileException(String s)
+{
+super(s);
+}
+}
+class InvalidAgeException extends Exception {
+public InvalidAgeException(String s)
+{
+super(s);
+}
+}
+public class Exception_Handling {
+public static void main(String[] args) throws Exception{
+try {
+Applicant applicant= new Applicant();
+applicant.setName("Jenny");
+applicant.setJobProfile("Clerk");
+applicant.setAge(25);
+
+Validator validator = new Validator();
+
+validator.validate(applicant);
+
+System.out.println("Application submitted successfully!");
+}
+
+catch (InvalidNameException|InvalidJobProfileException|InvalidAgeException e) {
+System.out.println(e.getMessage());
+}
+}
+}
